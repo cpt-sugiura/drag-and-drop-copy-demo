@@ -43214,7 +43214,11 @@ var App = function App() {
       setSchedules(function (old) {
         var _a, _b;
 
-        return [].concat(_toConsumableArray(old), [{
+        return [].concat(_toConsumableArray(old.filter(function (o) {
+          var _a;
+
+          return Number((_a = destinationDroppable === null || destinationDroppable === void 0 ? void 0 : destinationDroppable.droppableId) === null || _a === void 0 ? void 0 : _a.replace('droppable-', '')) !== o.day || copySrc.name !== o.name;
+        })), [{
           name: (_a = copySrc === null || copySrc === void 0 ? void 0 : copySrc.name) !== null && _a !== void 0 ? _a : '',
           id: Math.random(),
           day: Number((_b = destinationDroppable === null || destinationDroppable === void 0 ? void 0 : destinationDroppable.droppableId) === null || _b === void 0 ? void 0 : _b.replace('droppable-', ''))
