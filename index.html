@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf8">
+    <title>ドラッグアンドドロップデモ</title>
+    <style>
+        .week-calender-header {
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            overflow-y: scroll;
+        }
+        .week-calender-header * {
+            display: flex;
+            justify-content: center;
+        }
+        .week-calender-body {
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+        }
+        .week-calender-header > div, .week-calender-body > div{
+            height: 100%;
+            border: solid 1px #444;
+        }
+        .week-calender-cell {
+            background: #fff;
+            border: solid 1px #444;
+        }
+    </style>
+
+</head>
+<body>
+<div id="app"></div>
+<script src="_index.js"></script>
+</body>
+</html>
