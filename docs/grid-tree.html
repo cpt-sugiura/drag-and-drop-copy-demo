@@ -1,0 +1,41 @@
+ <style>
+        .directory, .file {
+            border: solid 1px black;
+        }
+        .name {
+            margin: 0 5px;
+        }
+        .directory {
+            display: grid;
+            width: fit-content;
+            width: -moz-fit-content;
+            grid-template-columns: fit-content(100%) 1fr;
+        }
+        #demo-plane-html-root {
+            width: 100%;
+        }
+    </style>
+<div id="demo-plane-html-root">
+    <div class="directory">
+        <span class="name">Mail</span>
+        <div class="children">
+            <div class="file">
+                <span class="name">Attachment.php</span>
+            </div>
+            <div class="directory">
+                <span class="name">Events</span>
+                <div class="children">
+                    <div class="file">
+                        <span class="name">MessageSending.php</span>
+                    </div>
+                    <div class="file">
+                        <span class="name">MessageSent.php</span>
+                    </div>
+                </div>
+            </div>
+            <div class="file">
+                <span class="name">LICENSE.md</span>
+            </div>
+        </div>
+    </div>
+</div>
